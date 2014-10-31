@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EData</name>
+    <events>
+        <variable constant="0" name="KeyPress" sid="5244117944243861" static="0" type="text"></variable>
+        <event-block sid="8839016123595555">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1328630662399149" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="8331078126479935" type="AJAX">
+                    <param id="0" name="Tag">&quot;xml&quot;</param>
+                    <param id="1" name="File">Dictionary.xml</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8804902070914178">
+            <conditions>
+                <condition id="0" name="On completed" sid="2147356978174493" type="AJAX">
+                    <param id="0" name="Tag">&quot;xml&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="7727283333253947" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8511124875087237">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="4432686690978958" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/PlayerWeaponVariations/Weapon&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="7913250742643706" type="Dictionary">
+                            <param id="0" name="Key">&quot;KeyPress&quot;&amp;Keyboard.StringFromKeyCode(int(XML.StringValue(&quot;KeyPress/text()&quot;)))</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7581133807592114" type="System">
+                            <param id="0" name="Variable">KeyPress</param>
+                            <param id="1" name="Value">Keyboard.StringFromKeyCode(int(XML.StringValue(&quot;KeyPress/text()&quot;)))&amp;newline</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2319971612840292" type="Dictionary">
+                            <param id="0" name="Key">&quot;Name&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponName/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6555354960406554" type="Dictionary">
+                            <param id="0" name="Key">&quot;Sound&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponSound/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3082702613317982" type="Dictionary">
+                            <param id="0" name="Key">&quot;SoundReload&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponSoundReload/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2778096252826737" type="Dictionary">
+                            <param id="0" name="Key">&quot;Damage&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;Weapondamage/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3430950011302765" type="Dictionary">
+                            <param id="0" name="Key">&quot;Bullets&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponBullets/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6960449084185829" type="Dictionary">
+                            <param id="0" name="Key">&quot;Spread&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponSpread/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="4609827825686316" type="Dictionary">
+                            <param id="0" name="Key">&quot;Time&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponTime/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="1335383412586418" type="Dictionary">
+                            <param id="0" name="Key">&quot;Range&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponRange/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="9179810316647324" type="Dictionary">
+                            <param id="0" name="Key">&quot;MagazineSize&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;MagazineSize/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3634742761822247" type="Dictionary">
+                            <param id="0" name="Key">&quot;ReloadTime&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ReloadTime/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="7452957334970724" type="Dictionary">
+                            <param id="0" name="Key">&quot;BulletSpeed&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;BulletSpeed/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="8190307340997727" type="Dictionary">
+                            <param id="0" name="Key">&quot;AmmoCost&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;AmmoCost/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7981028017407221">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="4205219407665821" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/EnemyWeaponVariations/Weapon&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="832869446935115" type="Dictionary">
+                            <param id="0" name="Key">&quot;EnemyWeapon&quot;&amp;Dictionary.Get(&quot;AmountGuns&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="4386708942265936" type="Dictionary">
+                            <param id="0" name="Key">&quot;AmountGuns&quot;</param>
+                            <param id="1" name="Value">Dictionary.Get(&quot;AmountGuns&quot;)+1</param>
+                        </action>
+                        <action id="0" name="Add key" sid="5043560805653305" type="Dictionary">
+                            <param id="0" name="Key">&quot;Damage&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;Weapondamage/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="1162833484263457" type="Dictionary">
+                            <param id="0" name="Key">&quot;Bullets&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponBullets/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3356413930372887" type="Dictionary">
+                            <param id="0" name="Key">&quot;Spread&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponSpread/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6299140892826174" type="Dictionary">
+                            <param id="0" name="Key">&quot;Time&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponTime/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3421525383185056" type="Dictionary">
+                            <param id="0" name="Key">&quot;Range&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WeaponRange/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="7794779065006284" type="Dictionary">
+                            <param id="0" name="Key">&quot;MagazineSize&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;MagazineSize/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="5742994604065185" type="Dictionary">
+                            <param id="0" name="Key">&quot;ReloadTime&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ReloadTime/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="9102978497674131" type="Dictionary">
+                            <param id="0" name="Key">&quot;BulletSpeed&quot;&amp;XML.StringValue(&quot;WeaponID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;BulletSpeed/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5889051645726374">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="1969597670630141" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/ResourceKitVariations/ResourceKit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9976659376801951" type="Dictionary">
+                            <param id="0" name="Key">&quot;ResourceKit&quot;&amp;Dictionary.Get(&quot;AmountResourceKits&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ResourceKitID/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2902093290001408" type="Dictionary">
+                            <param id="0" name="Key">&quot;ResourceKitName&quot;&amp;XML.StringValue(&quot;ResourceKitID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ResourceKitName/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="5902511273260186" type="Dictionary">
+                            <param id="0" name="Key">&quot;ResourceKitHealth&quot;&amp;XML.StringValue(&quot;ResourceKitID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ResourceKitHealth/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2339531590103537" type="Dictionary">
+                            <param id="0" name="Key">&quot;ResourceKitAmmo&quot;&amp;XML.StringValue(&quot;ResourceKitID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ResourceKitAmmo/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2854382038644363" type="Dictionary">
+                            <param id="0" name="Key">&quot;ResourceKitDropChance&quot;&amp;XML.StringValue(&quot;ResourceKitID/text()&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;ResourceKitDropChance/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="3890720175868039" type="Dictionary">
+                            <param id="0" name="Key">&quot;AmountResourceKits&quot;</param>
+                            <param id="1" name="Value">Dictionary.Get(&quot;AmountResourceKits&quot;)+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5496581924387107">
+                    <conditions>
+                        <condition id="0" name="For each node" sid="8407846780215251" type="XML">
+                            <param id="0" name="XPath">&quot;/Dictionary/Waves/Wave&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="6175280562496994" type="Dictionary">
+                            <param id="0" name="Key">&quot;Wave&quot;&amp;Dictionary.Get(&quot;AmountWaves&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;WaveName/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="2438174434128112" type="Dictionary">
+                            <param id="0" name="Key">&quot;AmountEnemys&quot;&amp;&quot;Wave&quot;&amp;Dictionary.Get(&quot;AmountWaves&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;AmountEnemys/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="8764228423630946" type="Dictionary">
+                            <param id="0" name="Key">&quot;EnemysSpawnTime&quot;&amp;&quot;Wave&quot;&amp;Dictionary.Get(&quot;AmountWaves&quot;)</param>
+                            <param id="1" name="Value">XML.StringValue(&quot;EnemysSpawnTime/text()&quot;)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="1893009797724515" type="Dictionary">
+                            <param id="0" name="Key">&quot;AmountWaves&quot;</param>
+                            <param id="1" name="Value">Dictionary.Get(&quot;AmountWaves&quot;)+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EConsole</name>
+    <events>
+        <variable constant="0" name="GodMode" sid="4108684827610123" static="0" type="number">0</variable>
+        <variable constant="0" name="Command" sid="1775747275135516" static="0" type="text"></variable>
+        <event-group description="" sid="1160640926922673" title="Base">
+            <sub-events>
+                <event-block sid="8957219458783414">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1814104553895245" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="3943560356403027" type="Console">
+                            <param id="0" name="X">50</param>
+                            <param id="1" name="Y">100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6448100111265716" type="Stats">
+                            <param id="0" name="X">50</param>
+                            <param id="1" name="Y">500</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="5478769085421506" type="ConsoleInput">
+                            <param id="0" name="X">50</param>
+                            <param id="1" name="Y">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3900092899565735">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7437400470829952" type="Keyboard">
+                            <param id="0" name="Key">192 (Grave)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5841666523791969">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6079669589642755" type="Console">
+                                    <param id="0" name="Instance variable">Visible</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set visible" sid="3734852013790087" type="Console">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="5680881423169434" type="ConsoleInput">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2772129235133816" type="Console">
+                                    <param id="0" name="Instance variable">Visible</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8856525473395998">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4064878409046301" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set visible" sid="265387798702111" type="Console">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set visible" sid="9965717689932358" type="ConsoleInput">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6076132089329715" type="Console">
+                                    <param id="0" name="Instance variable">Visible</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3790972180268018">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8183596868977102" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="575459655053389" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">ConsoleInput.Text</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8863099052241712" type="Function">
+                            <param id="0" name="Name">ConsoleInput.Text</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="8644557646451086" type="ConsoleInput">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5693266958660576" title="Comands">
+            <sub-events>
+                <event-block sid="1945176635478431">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6544452644889511" type="Function">
+                            <param id="0" name="Name">&quot;s&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6416811288710931" type="System">
+                            <param id="0" name="Object to create">Alien1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">player1.X+100</param>
+                            <param id="3" name="Y">player1.Y+100</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5839336865023287" type="System">
+                            <param id="0" name="Object to create">Alien2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">player1.X+100</param>
+                            <param id="3" name="Y">player1.Y+100</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4410235206161913" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;spawnt enemys&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5960837427271626">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5390833907535254" type="Function">
+                            <param id="0" name="Name">&quot;test&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="6" name="Speak text" sid="8609892469534718" type="UserMedia">
+                            <param id="0" name="Text">&quot;this is a test&quot;</param>
+                            <param id="1" name="Language">&quot;&quot;</param>
+                            <param id="2" name="Voice URI">&quot;&quot;</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="4" name="Rate">1</param>
+                            <param id="5" name="Pitch">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5367484589242954" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">int(Dictionary.Get(&quot;MagazineSize&quot;&amp;player1.Weapon))-Player1.Ammo</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9719292635141157">
+                    <conditions>
+                        <condition id="0" name="On function" sid="7141821716370171" type="Function">
+                            <param id="0" name="Name">&quot;kick&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="21" name="Kick peer" sid="5119607381933585" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.PeerIDAt(1)</param>
+                            <param id="1" name="Reason">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2738261084618456" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Kicked the other player&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9186794164244565">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6800515256735264" type="Function">
+                            <param id="0" name="Name">&quot;VoiceCount&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7609084297382505" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">UserMedia.VoiceCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3115440476263895">
+                    <conditions>
+                        <condition id="0" name="On function" sid="348091775120208" type="Function">
+                            <param id="0" name="Name">&quot;walls on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4979628084176415" type="Walls">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4263581487829811" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;set walls to visible&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7478175106347056">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9273019895487766" type="Function">
+                            <param id="0" name="Name">&quot;walls off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7312261083504145" type="Walls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7710342894681646" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;set walls to invisible&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="4750011788233241">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4405097608244646" type="Function">
+                            <param id="0" name="Name">&quot;kill&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="0" name="On key pressed" sid="8417658114003688" type="Keyboard">
+                            <param id="0" name="Key">106 (Num Mult)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="734725768473113" type="Alien1" />
+                        <action id="-9" name="Destroy" sid="9850282012677242" type="Alien2" />
+                        <action id="0" name="Call function" sid="4744963396861952" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Killed all enemy&apos;s&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9927755965140721">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4045546189787799" type="Function">
+                            <param id="0" name="Name">&quot;c&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7262806252632327" type="Player1">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Value">&quot;PlayerWeaponVar999&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8780008311161365" type="Player2">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Value">&quot;PlayerWeaponVar999&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3185623233421327" type="Player1">
+                            <param id="0" name="Instance variable">Ammo</param>
+                            <param id="1" name="Value">float(Dictionary.Get(&quot;MagazineSize&quot;&amp;player1.Weapon))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2282987240454251" type="Player2">
+                            <param id="0" name="Instance variable">Ammo</param>
+                            <param id="1" name="Value">float(Dictionary.Get(&quot;MagazineSize&quot;&amp;player2.Weapon))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1881677231818988" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Cheat gun spawnt!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6092227212821423">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2621498672657449" type="Function">
+                            <param id="0" name="Name">&quot;t&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="1659664267982876" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3189208947254881" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;stopt time&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1970167973069963">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2873329775611835" type="Function">
+                            <param id="0" name="Name">&quot;tr&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="9997354117458809" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1312614384599335" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Restored time&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7428686000458204">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8786254392759437" type="Function">
+                            <param id="0" name="Name">&quot;h&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4883079408249866" type="Player1">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1835478014410742" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Set health to 100%&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3937169922651246">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1887613206795458" type="Function">
+                            <param id="0" name="Name">&quot;god&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1543945013777675" type="System">
+                            <param id="0" name="Variable">GodMode</param>
+                            <param id="1" name="Value">&quot;On&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8039096605188136" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Godmode ON!&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1851535569548041" type="System">
+                            <param id="0" name="Variable">GodMode</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8809774009841212">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1123426680953087" type="Function">
+                            <param id="0" name="Name">&quot;ov on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set canvas size" sid="2339712214563672" type="System">
+                            <param id="0" name="Width">10000</param>
+                            <param id="1" name="Height">5000</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3536079526076177" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Overview on&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6012844223534361">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4866829313939039" type="Function">
+                            <param id="0" name="Name">&quot;ov off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set canvas size" sid="4220023123433796" type="System">
+                            <param id="0" name="Width">1280</param>
+                            <param id="1" name="Height">720</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2328508856294889" type="Function">
+                            <param id="0" name="Name">&quot;Log&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Overview off&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980867848088532">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="6093628827218183" type="System" />
+                        <condition id="-14" name="Compare variable" sid="9281240423855789" type="System">
+                            <param id="0" name="Variable">GodMode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1629185138234366" type="Player1">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4583987541696743" type="Player1">
+                            <param id="0" name="Instance variable">Ammo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3297552111177218" type="Player2">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8586698155556511" type="Player2">
+                            <param id="0" name="Instance variable">Ammo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

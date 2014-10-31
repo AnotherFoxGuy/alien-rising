@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EMenu</name>
+    <events>
+        <include>ESound</include>
+        <variable constant="0" name="NickName" sid="2714959717652726" static="0" type="text"></variable>
+        <variable constant="0" name="GameName" sid="9361716853454187" static="0" type="text"></variable>
+        <event-block sid="9272978607124112">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5466179150183643" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1247428480745002" type="GameName">
+                    <param id="0" name="Pin to">MenuFill</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6501530374431653" type="NickName">
+                    <param id="0" name="Pin to">MenuFill</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7836014515116543" type="Start">
+                    <param id="0" name="Pin to">MenuFill</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Call function" sid="4144202967725841" type="Function">
+                    <param id="0" name="Name">&quot;PlaySoundLoop&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Game Menu soundtrack&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6264169788424029">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7573912788750095" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7500820208022274" type="System">
+                    <param id="0" name="Variable">NickName</param>
+                    <param id="1" name="Value">NickNameTextBox.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="1793686493315752" type="System">
+                    <param id="0" name="Variable">GameName</param>
+                    <param id="1" name="Value">GameNameTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1462411669204326">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1914937889191377" type="Start" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6914070575073293" type="MenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="6230907076177376" type="Function">
+                    <param id="0" name="Name">&quot;PlaySound&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Play Button&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4475326673389018">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="378918714837065" type="MenuFill">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6072251231617754" type="MenuFill">
+                    <param id="0" name="X">MenuFill.X-10</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6117276513703803">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="2648537398317647" type="MenuFill">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-9" name="Set value" sid="8321488828477098" type="System">
+                            <param id="0" name="Variable">NickName</param>
+                            <param id="1" name="Value">trim(NickName.Text)</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="1118182508372675" type="System">
+                            <param id="0" name="Variable">GameName</param>
+                            <param id="1" name="Value">trim(GameName.Text)</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1181093414131767" type="System">
+                            <param id="0" name="Layout">LGame</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6139806009131627">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5523450280335034" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">NickName</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9098353388317187" type="NickName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8056666417012484" type="GameName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3027471210023772">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9136408028484435" type="NickName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9758788068630823">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4432309560297072" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="765945338227741">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4770717026066845" type="NickName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="5160015740330103" type="NickName">
+                                    <param id="0" name="Text">&quot;|&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1240234927049568" type="NickName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7667982156358036">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9221871081629047" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="8350547022154384" type="NickName">
+                                    <param id="0" name="Text">replace(NickName.Text,&quot;|&quot;,&quot;&quot;)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3995621033237034" type="NickName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1983811176331794">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4583965764149465" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">GameName</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6707054338245224" type="NickName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9261003323797456" type="GameName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2665056484896812">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2591537595887052" type="GameName">
+                    <param id="0" name="Instance variable">IsUsing</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5914376153925324">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="5583741219137956" type="Keyboard">
+                            <param id="0" name="Key">8 (Backspace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9337530759805418" type="GameName">
+                            <param id="0" name="Text">replace(GameName.Text,right(GameName.Text,1),&quot;&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8577623459003178">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="4439213064618637" type="Keyboard" />
+                        <condition id="2" inverted="1" name="Key is down" sid="7613599313066673" type="Keyboard">
+                            <param id="0" name="Key">8 (Backspace)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="3815848164624386" type="GameName">
+                            <param id="0" name="Text">Keyboard.StringFromKeyCode(Keyboard.LastKeyCode)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8671560818819856" type="GameName">
+                            <param id="0" name="Text">lowercase(GameName.Text)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4757797758239081">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="7426873279590007" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2839923722695481">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8015537986630751" type="GameName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="1791311601181768" type="GameName">
+                                    <param id="0" name="Text">&quot;|&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4591259323376637" type="GameName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6650873893287296">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5801040830179897" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="8402629951968384" type="GameName">
+                                    <param id="0" name="Text">replace(GameName.Text,&quot;|&quot;,&quot;&quot;)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4457191163986367" type="GameName">
+                                    <param id="0" name="Instance variable">Cursor</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2889331733851529">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7357776256634256" type="Button" />
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="2892685967800248" type="Browser">
+                    <param id="0" name="URL">&quot;https://github.com/AnotherFoxGuy/GameJam&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2016161923476006">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="3038842434375639" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2866824269519606" type="Text">
+                    <param id="0" name="Text">Keyboard.LastKeyCode</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6956083104633881">
+            <conditions>
+                <condition id="6" name="On update ready" sid="1034736355270337" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Alert" sid="5933766886235117" type="Browser">
+                    <param id="0" name="Message">&quot;updated the game.&quot;</param>
+                </action>
+                <action id="9" name="Reload" sid="7031762114153407" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EPeer</name>
+    <events>
+        <event-group description="" inactive="1" sid="2846367495818879" title="Peer">
+            <sub-events>
+                <event-block sid="1709559934721757">
+                    <conditions>
+                        <condition id="17" name="On client update" sid="9104863641186194" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Set client state" sid="7172280610715956" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;lookx&quot;</param>
+                            <param id="1" name="Value">Mouse.X</param>
+                        </action>
+                        <action id="14" name="Set client state" sid="5859761368481512" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;looky&quot;</param>
+                            <param id="1" name="Value">Mouse.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="1971729208788352">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8559827501775313" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="1370859006570491" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="672665164398241" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 0, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2662412526827956">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5191528395117794" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5439447771853798" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 0, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="648647977041175">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8447341476018237" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="3054013896788539" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6556596566883098" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 1, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1203180825743905">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="616479965506493" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1729408295951516" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 1, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9617017632374123">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="5958052996565888" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="3753068103875932" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3663690482715753" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 2, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2236525976795362">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5801531026193411" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8400825255435775" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 2, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="3325011002759892">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="3140665950417283" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="6889838545964689" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1743434496381611" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 3, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9907595945017085">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3061303881231718" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2208582016859535" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 3, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="7751847715438149">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="518448405590988" type="Keyboard">
+                                    <param id="0" name="Key">16 (Shift)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6274963050372106" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 4, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1398081195338229">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8265504651390918" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="178107125478899" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 4, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1864515082664">
+                            <conditions>
+                                <condition id="2" name="Mouse button is down" sid="9035706111285318" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3372504159245154" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 5, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7662744071541153">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2587308038619933" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7479862934157146" type="Player2">
+                                    <param id="0" name="Instance variable">inputs</param>
+                                    <param id="1" name="Value">setbit(Self.inputs, 5, 0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8146095660496603">
+                            <conditions />
+                            <actions>
+                                <action id="14" name="Set client state" sid="6255693224977293" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;inputs&quot;</param>
+                                    <param id="1" name="Value">player2.inputs</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="498767203706745">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="8166159326810971" type="Player2" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5620932269169708" type="Player2">
+                            <param id="0" name="Instance variable">PeerID</param>
+                            <param id="1" name="Value">Multiplayer.PeerID</param>
+                        </action>
+                        <action id="13" name="Associate object with peer" sid="8557250714296646" type="Multiplayer">
+                            <param id="0" name="Object">Player2</param>
+                            <param id="1" name="Peer ID">Multiplayer.PeerID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8137001880296476">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="309843058661745" type="Player1" />
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="2212940331281761" type="Player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2757628625308737">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="40615955173561" type="Bullet" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2340320799086073">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3952181521031204" type="System">
+                                    <param id="0" name="First value">Bullet.From</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5561228619911123" type="Bullet">
+                                    <param id="0" name="Animation">player1.Weapon</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6320378255929895">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7371541413803776" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="844060047457528" type="Bullet">
+                                    <param id="0" name="Animation">player2.Weapon</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3564281654559989">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2473001407949372" type="Keyboard">
+                            <param id="0" name="Key">69 (E)</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="6444457973854573" type="Player2">
+                            <param id="0" name="Object">Car</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="9188781033620778" type="Multiplayer">
+                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;Enter&quot;</param>
+                            <param id="2" name="Message">Multiplayer.PeerID</param>
+                            <param id="3" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8121378000095534">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="3266540289410579" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="2574447365862767" type="Multiplayer">
+                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;Exit&quot;</param>
+                            <param id="2" name="Message">Multiplayer.PeerID</param>
+                            <param id="3" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8525458765858094">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6976767849847361" type="Keyboard">
+                            <param id="0" name="Key">82 (R)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="5201974919484046" type="Multiplayer">
+                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;Reload&quot;</param>
+                            <param id="2" name="Message">player2.Weapon</param>
+                            <param id="3" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7605316541442909">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6648180353751587" type="Keyboard">
+                            <param id="0" name="Key">74 (J)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="2267807443716456" type="Multiplayer">
+                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;Player 2 Ready&quot;</param>
+                            <param id="2" name="Message">&quot;&quot;</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="8901208709743175" type="Ready">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6927361953088959">
+                    <conditions>
+                        <condition id="1" name="On any key pressed" sid="4192752877865912" type="Keyboard" />
+                        <condition id="-8" name="Compare two values" sid="4894040473659734" type="System">
+                            <param id="0" name="First value">find(KeyPress,Keyboard.StringFromKeyCode(Keyboard.LastKeyCode))</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="7647369876310841" type="Multiplayer">
+                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;SwitchPlayer2&quot;</param>
+                            <param id="2" name="Message">Dictionary.Get(&quot;KeyPress&quot;&amp;Keyboard.StringFromKeyCode(Keyboard.LastKeyCode))</param>
+                            <param id="3" name="Mode">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1636148362912295" type="Player2">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Value">Dictionary.Get(&quot;KeyPress&quot;&amp;Keyboard.StringFromKeyCode(Keyboard.LastKeyCode))</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2244413506782062" type="Player2">
+                            <param id="0" name="Animation">player2.Weapon</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9812999563932968">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="5710103597717186" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;SwitchPlayer1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8773222446804074" type="Player1">
+                            <param id="0" name="Instance variable">Weapon</param>
+                            <param id="1" name="Value">Multiplayer.Message</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9855293210029593" type="Player1">
+                            <param id="0" name="Animation">player1.Weapon</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479383944510628">
+                    <conditions>
+                        <condition id="17" name="On client update" sid="198365807088843" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9397001157301162" type="PlayerStats">
+                            <param id="0" name="Text">Dictionary.Get(&quot;Name&quot;&amp;player2.Weapon)&amp;newline&amp;player2.Ammo&amp;newline&amp;Dictionary.Get(Wave)&#x0D;&#x0A;&amp;newline&amp;Dictionary.Get(&quot;EnemysSpawnTime&quot;&amp;player2.Wave)&#x0D;&#x0A;</param>
+                        </action>
+                        <action id="3" name="Set progress" sid="9661944179328779" type="health">
+                            <param id="0" name="Value">player2.health</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6345450904098991">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="5241878890824346" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Player 1 Ready&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3802758089486103" type="Ready">
+                            <param id="0" name="Text">&quot;Ready ?&quot;&amp;newline&amp;&quot;Player 1 Ready&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8722195223944377">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="8346456474573318" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Reset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6991348078659785" type="Ready">
+                            <param id="0" name="Text">&quot;Ready ?&quot;</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="4143540274772533" type="Ready">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164975281013668">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="8585359344852597" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Player1Visible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2362993604670429" type="Player1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9390016498729535">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="5895229431941973" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Player1Invisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6064209092896772" type="Player1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3985392234758055">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="7315291353138344" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Player2Visible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1405230912147908" type="Player2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9456699109985727">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="7379925134439781" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;Player2Invisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6295642642847025" type="Player2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

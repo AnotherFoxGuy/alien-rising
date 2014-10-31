@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>EGame</name>
+    <events>
+        <include>ESound</include>
+        <include>EData</include>
+        <include>EConsole</include>
+        <include>EMP</include>
+        <event-block sid="9005483545057589">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4179468767570497" type="Keyboard">
+                    <param id="0" name="Key">9 (Tab)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4826370356069509">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9859793156389131" type="Stats">
+                            <param id="0" name="Instance variable">Visible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="5582506333319688" type="Stats">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3289802800959465" type="Stats">
+                            <param id="0" name="Instance variable">Visible</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5181591286431262">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5246728370628508" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="8883600890511556" type="Stats">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2446100556434413" type="Stats">
+                            <param id="0" name="Instance variable">Visible</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9321833746593732">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5755436532406737" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="9703753935967488" type="Stats">
+                    <param id="0" name="Instance variable">Visible</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6103365933233472" type="Stats">
+                    <param id="0" name="Text">Multiplayer.PeerCount &amp; &quot; peers connected&quot; &amp; newline &amp; &#x0D;&#x0A;Multiplayer.StatInboundCount &amp; &quot; in (&quot; &amp; (round(Multiplayer.StatInboundBandwidth/100)/10) &amp; &quot; k) / sec&quot; &amp; newline &amp; &#x0D;&#x0A;Multiplayer.StatOutboundCount &amp; &quot; out (&quot; &amp; (round(Multiplayer.StatOutboundBandwidth/100)/10) &amp; &quot; k) / sec&quot; &amp; newline &amp; &#x0D;&#x0A;&quot;Host ping &quot; &amp; round(Multiplayer.PeerLatency(Multiplayer.HostID)) &amp; &quot;, PDV &quot; &amp; round(Multiplayer.PeerPDV(Multiplayer.HostID))&amp; newline &amp; &#x0D;&#x0A;&quot;FPS &quot; &amp; fps&amp; newline &amp; &#x0D;&#x0A;cpuutilisation </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9859130160224286">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="145027096129015" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="5216156552307008" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="33" name="Stop all" sid="7835275618691847" type="Audio" />
+            </actions>
+        </event-block>
+        <event-block sid="9698497177652959">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="7076401891036305" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="3930328824948509">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9165386597227906" type="TriggerUpStairs">
+                    <param id="0" name="Object">Player1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5515517076142869" type="Player1">
+                    <param id="0" name="Object">TriggerDownStairs</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2418637250923835">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="942483529133008" type="TriggerUpStairs">
+                    <param id="0" name="Object">Player2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="929066394919868" type="Player2">
+                    <param id="0" name="Object">TriggerDownStairs</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4671331357668053">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9716246711195568" type="TriggerDownStairs">
+                    <param id="0" name="Object">Player1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5293520137293691" type="Player1">
+                    <param id="0" name="Object">TriggerUpStairs</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4341196028625995">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6445118180460098" type="TriggerDownStairs">
+                    <param id="0" name="Object">Player2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="4158078204409868" type="Player2">
+                    <param id="0" name="Object">TriggerUpStairs</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2600197089855438">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7938539395312831" type="System">
+                    <param id="0" name="Interval (seconds)">random(10,60)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9748722936570492" type="Function">
+                    <param id="0" name="Name">&quot;PlaySound&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Alien Scream SFX 01&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1581484196705735">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7911436721877825" type="System">
+                    <param id="0" name="Interval (seconds)">random(10,60)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3908639290970098" type="Function">
+                    <param id="0" name="Name">&quot;PlaySound&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Alien Scream SFX 02&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

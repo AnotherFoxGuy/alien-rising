@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>alien-rising</name>
+    <description></description>
+    <version>0.0.0.3</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>https://github.com/AnotherFoxGuy/alien-rising</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2vems4zp5wzsz</unique-id>
+    <saved-with-version>18400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="UserMedia" version="1">User Media</plugin>
+        <plugin author="Scirra" id="XML" version="1">XML</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Car" version="1">Car</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="inverse">Inverse</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>LMenu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale outer</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Game">
+            <object-type name="Alien1" sid="6379028836451121">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="alien1health" sid="3984767876554092" type="number" />
+                    <instance-variable name="Weapon" sid="5131483944243854" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="8340344276662987">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="3847942986120773">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8193237475426218" speed="5">
+                        <frame duration="1" hotspotX="0.515654" hotspotY="0.489744" original-source="D:\Users\sietze\Documents\GitHub\GameJam\Files\top down alien.png">
+                            <image-point name="Imagepoint 1" x="0.972376" y="0.571795" />
+                            <collision-poly>
+                                <point x="0.174954" y="0.0153846" />
+                                <point x="0.515654" y="0.125641" />
+                                <point x="0.650092" y="0.302564" />
+                                <point x="0.725599" y="0.489744" />
+                                <point x="0.624309" y="0.641026" />
+                                <point x="0.515654" y="0.65641" />
+                                <point x="0.198895" y="0.930769" />
+                                <point x="0.00552486" y="0.489744" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Alien2" sid="6123717914358031">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="alien2health" sid="5309223100971365" type="number" />
+                    <instance-variable name="Weapon" sid="5615742122398396" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pathfinding" sid="5427313285818803">
+                        <behavior id="Pathfinding" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="3337593579161992">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9640650938552473" speed="5">
+                        <frame duration="1" hotspotX="0.515654" hotspotY="0.489744" original-source="D:\Users\sietze\Documents\GitHub\GameJam\Files\top down alien.png">
+                            <image-point name="Imagepoint 1" x="0.974217" y="0.574359" />
+                            <collision-poly>
+                                <point x="0.174954" y="0.0153846" />
+                                <point x="0.515654" y="0.125641" />
+                                <point x="0.650092" y="0.302564" />
+                                <point x="0.725599" y="0.489744" />
+                                <point x="0.624309" y="0.641026" />
+                                <point x="0.515654" y="0.65641" />
+                                <point x="0.198895" y="0.930769" />
+                                <point x="0.00552486" y="0.489744" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Car" sid="9732945421089468">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="healthCar" sid="8871323635618021" type="number" />
+                    <instance-variable name="PlayerIsSteering" sid="5445673444064377" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Car" sid="9821052875735359">
+                        <behavior id="Car" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="1665289038847322">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3325902044855785" speed="5">
+                        <frame duration="1" hotspotX="0.500348" hotspotY="0.500588" original-source="D:\Users\sietze\Documents\GitHub\GameJam\Files\auto -3.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bullet" sid="3524011789772569">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Damage" sid="1435227176234472" type="number" />
+                    <instance-variable name="LiveTime" sid="893338464913178" type="number" />
+                    <instance-variable name="From" sid="7192163848710652" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="2681399059444395">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="1845745422320515">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar0" pingpong="0" repeatcount="1" repeatto="0" sid="3247432924797301" speed="5">
+                        <frame duration="1" hotspotX="0.504348" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\bullets.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar1" pingpong="0" repeatcount="1" repeatto="0" sid="5966071805536403" speed="5">
+                        <frame duration="1" hotspotX="0.505618" hotspotY="0.510638" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\bullets.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar2" pingpong="0" repeatcount="1" repeatto="0" sid="4196943792817471" speed="5">
+                        <frame duration="1" hotspotX="0.505618" hotspotY="0.510638" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\bullets.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar3" pingpong="0" repeatcount="1" repeatto="0" sid="1544883550633884" speed="5">
+                        <frame duration="1" hotspotX="0.503497" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\bullets.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar999" pingpong="0" repeatcount="1" repeatto="0" sid="7519213132891645" speed="5">
+                        <frame duration="1" hotspotX="2.60674" hotspotY="0.510638" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\bullets.png">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="0.977528" y="0.510638" />
+                                <point x="1" y="0" />
+                                <point x="0.011236" y="0.510638" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BulletEnemy" sid="7779554787279566">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Damage" sid="6885797664530062" type="number" />
+                    <instance-variable name="LiveTime" sid="7138423056396476" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="9614780018528247">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="6058983940580177">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Inverse">
+                        <effect id="inverse" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2935164124768429" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="E:\MEGA\Construct 2\tests\bullet.png">
+                            <collision-poly>
+                                <point x="0.16" y="0.25" />
+                                <point x="0.48" y="0.25" />
+                                <point x="0.8" y="0.3125" />
+                                <point x="0.92" y="0.5" />
+                                <point x="0.8" y="0.6875" />
+                                <point x="0.48" y="0.75" />
+                                <point x="0.16" y="0.75" />
+                                <point x="0.08" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player1" sid="8844892279089968">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Health" sid="197881818459763" type="number" />
+                    <instance-variable name="PeerID" sid="2091057517433149" type="string" />
+                    <instance-variable name="Shoot" sid="9917506818984381" type="number" />
+                    <instance-variable name="Weapon" sid="7381269038364186" type="string" />
+                    <instance-variable name="Ammo" sid="1758101689548273" type="number" />
+                    <instance-variable name="AmmoCarrying" sid="8376336548980649" type="number" />
+                    <instance-variable name="Ready" sid="55248752618054" type="boolean" />
+                    <instance-variable name="Visible" sid="2841346507170573" type="number" />
+                    <instance-variable name="Bullet" sid="5067675261939681" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="4499534065995238">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="7349401509961639">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="39440076948172">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="3005542886763206">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar0" pingpong="0" repeatcount="1" repeatto="0" sid="8421277065683548" speed="5">
+                        <frame duration="1" hotspotX="0.171975" hotspotY="0.487871" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 1 shotgun.png">
+                            <image-point name="Imagepoint 1" x="1.02972" y="0.522911" />
+                            <collision-poly>
+                                <point x="0.0492986" y="0" />
+                                <point x="0.479104" y="0" />
+                                <point x="0.786106" y="0.0107154" />
+                                <point x="1" y="0.450948" />
+                                <point x="0.816807" y="0.968867" />
+                                <point x="0.479104" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.450948" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar1" pingpong="0" repeatcount="1" repeatto="0" sid="4231909792425617" speed="5">
+                        <frame duration="1" hotspotX="0.171975" hotspotY="0.487871" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 1 shotgun.png">
+                            <image-point name="Imagepoint 1" x="1.02972" y="0.51752" />
+                            <collision-poly>
+                                <point x="0.110403" y="0.0377358" />
+                                <point x="0.464968" y="0.0781671" />
+                                <point x="0.989384" y="0.487871" />
+                                <point x="0.543524" y="0.587601" />
+                                <point x="0.464968" y="0.889488" />
+                                <point x="0.11465" y="0.932615" />
+                                <point x="0.0212314" y="0.487871" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar2" pingpong="0" repeatcount="1" repeatto="0" sid="5382783699501713" speed="5">
+                        <frame duration="1" hotspotX="0.267748" hotspotY="0.493261" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 1 flamethrower.png">
+                            <image-point name="Imagepoint 1" x="1.03448" y="0.520216" />
+                            <collision-poly>
+                                <point x="0.028333" y="0" />
+                                <point x="0.462436" y="0" />
+                                <point x="0.651064" y="0.14734" />
+                                <point x="0.966305" y="0.465559" />
+                                <point x="0.555458" y="0.622489" />
+                                <point x="0.462436" y="1" />
+                                <point x="0.0205811" y="1" />
+                                <point x="0" y="0.465559" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar3" pingpong="0" repeatcount="1" repeatto="0" sid="5261482668802906" speed="5">
+                        <frame duration="1" hotspotX="0.172023" hotspotY="0.487871" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 1 sniper.png">
+                            <image-point name="Imagepoint 1" x="1.03592" y="0.520216" />
+                            <collision-poly>
+                                <point x="0.177694" y="0.0107817" />
+                                <point x="0.510397" y="0.150943" />
+                                <point x="0.623819" y="0.32345" />
+                                <point x="0.992439" y="0.485175" />
+                                <point x="0.586011" y="0.592992" />
+                                <point x="0.510397" y="0.579515" />
+                                <point x="0.175803" y="0.962264" />
+                                <point x="0.0151229" y="0.485175" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Player2" sid="5962780117149025">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="health" sid="8041138939960504" type="number" />
+                    <instance-variable name="PeerID" sid="6222059558819272" type="string" />
+                    <instance-variable name="Weapon" sid="9865394060304834" type="string" />
+                    <instance-variable name="Ammo" sid="7066445811030652" type="number" />
+                    <instance-variable name="AmmoCarrying" sid="9505337907719175" type="number" />
+                    <instance-variable name="Ready" sid="1060598912714066" type="boolean" />
+                    <instance-variable name="inputs" sid="8990101044037619" type="number" />
+                    <instance-variable name="lookatx" sid="2208069435499688" type="number" />
+                    <instance-variable name="lookaty" sid="9994696658405057" type="number" />
+                    <instance-variable name="Wave" sid="3796231333323321" type="string" />
+                    <instance-variable name="Visible" sid="7112099570318106" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="8Direction" sid="4678802373369102">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="3235683154103485">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="8881280282977931">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="8158084540797381">
+                        <behavior id="bound" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar0" pingpong="0" repeatcount="1" repeatto="0" sid="6240766241736464" speed="5">
+                        <frame duration="1" hotspotX="0.153518" hotspotY="0.508287" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 2 shotgun.png">
+                            <image-point name="Imagepoint 1" x="0.985075" y="0.538674" />
+                            <collision-poly>
+                                <point x="0.182588" y="0.114682" />
+                                <point x="0.537251" y="0" />
+                                <point x="0.79058" y="0.245966" />
+                                <point x="1" y="0.524945" />
+                                <point x="0.815913" y="0.853153" />
+                                <point x="0.537251" y="1" />
+                                <point x="0.119255" y="1" />
+                                <point x="0" y="0.524945" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar1" pingpong="0" repeatcount="1" repeatto="0" sid="3941510952964773" speed="5">
+                        <frame duration="1" hotspotX="0.159915" hotspotY="0.508287" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 2 shotgun.png">
+                            <image-point name="Imagepoint 1" x="0.985075" y="0.538674" />
+                            <collision-poly>
+                                <point x="0.140725" y="0.0276243" />
+                                <point x="0.530917" y="0.146409" />
+                                <point x="0.673774" y="0.348066" />
+                                <point x="0.987207" y="0.533149" />
+                                <point x="0.594883" y="0.616022" />
+                                <point x="0.530917" y="0.71547" />
+                                <point x="0.179104" y="0.98895" />
+                                <point x="0.010661" y="0.533149" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar2" pingpong="0" repeatcount="1" repeatto="0" sid="4463696070692557" speed="5">
+                        <frame duration="1" hotspotX="0.251894" hotspotY="0.502762" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 2 flamethrower.png">
+                            <image-point name="Imagepoint 1" x="0.905303" y="0.519337" />
+                            <collision-poly>
+                                <point x="0.219697" y="0.0276243" />
+                                <point x="0.537879" y="0.11326" />
+                                <point x="0.676136" y="0.290055" />
+                                <point x="0.907197" y="0.491713" />
+                                <point x="0.606061" y="0.59116" />
+                                <point x="0.537879" y="0.928177" />
+                                <point x="0.214015" y="0.964088" />
+                                <point x="0.0378788" y="0.491713" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="PlayerWeaponVar3" pingpong="0" repeatcount="1" repeatto="0" sid="6574885777598238" speed="5">
+                        <frame duration="1" hotspotX="0.130682" hotspotY="0.505525" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\player 2 sniper.png">
+                            <image-point name="Imagepoint 1" x="0.984848" y="0.538674" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.0165746" />
+                                <point x="0.5" y="0.176796" />
+                                <point x="0.604167" y="0.350829" />
+                                <point x="0.994318" y="0.502762" />
+                                <point x="0.560606" y="0.59116" />
+                                <point x="0.5" y="0.59116" />
+                                <point x="0.170455" y="0.983425" />
+                                <point x="0.0151515" y="0.502762" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="House" sid="259674111660445">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7714686246017736" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Users\sietze\Documents\GitHub\GameJam\Files\1st floor alien rising.png">
+                            <collision-poly>
+                                <point x="0.252884" y="0.00265252" />
+                                <point x="0.761313" y="0.00397878" />
+                                <point x="0.997338" y="0.409814" />
+                                <point x="0.997338" y="0.762599" />
+                                <point x="0.913931" y="0.990716" />
+                                <point x="0.761313" y="0.972149" />
+                                <point x="0.606034" y="0.994695" />
+                                <point x="0.152618" y="0.762599" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TiledBackground" sid="9886024508423623">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Users\sietze\Documents\MEGA\Construct 2\tests\bg.png" />
+            </object-type>
+            <object-type name="Walls" sid="9892743482088304">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7930561549562337">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5370993246476801" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Blood" sid="1127807538439201">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="Particles" sid="1352828669361368">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="PlayerStats" sid="3593543951882309">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="health" sid="849874991858353">
+                <plugin id="progressbar" />
+            </object-type>
+            <object-type name="Ready" sid="6404650931798425">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="1stFloor" sid="963690648831016">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9699987075337239" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\1st floor.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TriggerDownStairs" sid="4959610607095976">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1477840023044742" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="-0.768" y="0.424" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TriggerUpStairs" sid="1339619498653123">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4919891585056533" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.528" y="1.58" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ResourceKit" sid="5744052917082382">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Health" sid="24573616460556" type="number" />
+                    <instance-variable name="Ammo" sid="6301688694615493" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="ResourceKitVar0" pingpong="0" repeatcount="1" repeatto="0" sid="5126880245716437" speed="5">
+                        <frame duration="1" hotspotX="0.501211" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\alien rising ammo package.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="ResourceKitVar1" pingpong="0" repeatcount="1" repeatto="0" sid="8509122354034435" speed="5">
+                        <frame duration="1" hotspotX="0.500557" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\health package.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="hedge" sid="8223573813815093">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="4171990603470555">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8367925708303251" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\alien rising hech.png">
+                            <collision-poly>
+                                <point x="0.175439" y="0.0532623" />
+                                <point x="0.5" y="0.00133156" />
+                                <point x="0.861842" y="0.0419441" />
+                                <point x="0.945175" y="0.5" />
+                                <point x="0.824561" y="0.946738" />
+                                <point x="0.5" y="0.998003" />
+                                <point x="0.140351" y="0.95739" />
+                                <point x="0.0394737" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Tree" sid="5179937162757088">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8589325602537493" speed="5">
+                        <frame duration="1" hotspotX="0.542529" hotspotY="0.489286" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\alien rising boom.png">
+                            <collision-poly>
+                                <point x="0.570115" y="0.485714" />
+                                <point x="0.45977" y="0.452381" />
+                                <point x="0.478161" y="0.57619" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Menu">
+            <object-type name="Button" sid="9496893776232021">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="GameName" sid="9311381501397266">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="IsUsing" sid="6117205019333703" type="boolean" />
+                    <instance-variable name="Cursor" sid="3301965709134362" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="7654254760698036">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="GameNameTextBox" sid="4702332369208288">
+                <plugin id="TextBox" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="6513485358482291">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="MenuFill" sid="2330020733476857">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Move" sid="6184324365909808" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9860569012474455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NickName" sid="5739181590584965">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="Cursor" sid="6064314911952144" type="boolean" />
+                    <instance-variable name="IsUsing" sid="9355102149504545" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="2683309281749752">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="NickNameTextBox" sid="1706453932299842">
+                <plugin id="TextBox" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8118008375808785">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Start" sid="8569658085201552">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="3130897230253667">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Text" sid="7119946653108646">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="alienRisingMenu" sid="6776794585745214">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7775143831648187" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Users\sietze\Documents\GitHub\alien-rising\Files\alien rising menu.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Other ">
+            <object-type name="Browser" sid="6124741590335973">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Console" sid="7088611659595509">
+                <plugin id="TextBox" />
+                <instance-variables>
+                    <instance-variable name="Visible" sid="5060440480451862" type="boolean" />
+                </instance-variables>
+            </object-type>
+            <object-type name="Function" sid="5741865047592194">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="1302829314514572">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="3755970284014847">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Multiplayer" sid="8763301489921866">
+                <plugin id="Multiplayer" />
+            </object-type>
+            <object-type name="UserMedia" sid="5959636433275363">
+                <plugin id="UserMedia" />
+            </object-type>
+            <object-type name="Stats" sid="38915752161922">
+                <plugin id="TextBox" />
+                <instance-variables>
+                    <instance-variable name="Visible" sid="1920846553085106" type="boolean" />
+                </instance-variables>
+            </object-type>
+            <object-type name="AJAX" sid="2721967516250327">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type global="1" name="Dictionary" sid="6702227882021895">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="XML" sid="5892406909796977">
+                <plugin id="XML" />
+            </object-type>
+            <object-type name="Black" sid="4495601329110361">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="3239646743539589">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8544221135619223" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Audio" sid="1592443422984737">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="ConsoleInput" sid="9552032552260083">
+                <plugin id="TextBox" />
+                <instance-variables>
+                    <instance-variable name="Visible" sid="8440428912828087" type="boolean" />
+                </instance-variables>
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families>
+        <family name="Solids" plugin-id="Sprite" sid="1174995753248422">
+            <members>
+                <member>Car</member>
+                <member>Walls</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>LGame.xml</layout>
+        <layout>LMenu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>EMP.xml</event-sheet>
+        <event-sheet>EPeer.xml</event-sheet>
+        <event-sheet>EHost.xml</event-sheet>
+        <event-sheet>EGame.xml</event-sheet>
+        <event-sheet>EMenu.xml</event-sheet>
+        <event-sheet>EConsole.xml</event-sheet>
+        <event-sheet>EData.xml</event-sheet>
+        <event-sheet>ESound.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="1" />
+        <global-instance type="Function" uid="3" />
+        <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Mouse" uid="7" />
+        <global-instance type="Browser" uid="29" />
+        <global-instance type="AJAX" uid="18" />
+        <global-instance type="Audio" uid="85">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Action SFX 01.m4a" />
+        <file name="Action SFX 01.ogg" />
+        <file name="Alien Kill SFX 01.m4a" />
+        <file name="Alien Kill SFX 01.ogg" />
+        <file name="Alien Scream SFX 01.m4a" />
+        <file name="Alien Scream SFX 01.ogg" />
+        <file name="Alien Scream SFX 02.m4a" />
+        <file name="Alien Scream SFX 02.ogg" />
+        <file name="alien voetstappen (1).m4a" />
+        <file name="alien voetstappen (1).ogg" />
+        <file name="Game Menu soundtrack.m4a" />
+        <file name="Game Menu soundtrack.ogg" />
+        <file name="Intro Button (1).m4a" />
+        <file name="Intro Button (1).ogg" />
+        <file name="moteropstart (1).m4a" />
+        <file name="moteropstart (1).ogg" />
+        <file name="moterrumble (1).m4a" />
+        <file name="moterrumble (1).ogg" />
+        <file name="Play Button.m4a" />
+        <file name="Play Button.ogg" />
+        <file name="Rumble SFX 01.m4a" />
+        <file name="Rumble SFX 01.ogg" />
+        <file name="Flamethrower IN SFX 01.m4a" />
+        <file name="Flamethrower IN SFX 01.ogg" />
+        <file name="Flamethrower Loop SFX 01.m4a" />
+        <file name="Flamethrower Loop SFX 01.ogg" />
+        <file name="Flamethrower Out SFX 01.m4a" />
+        <file name="Flamethrower Out SFX 01.ogg" />
+        <file name="Flamethrower Shot SFX 01.m4a" />
+        <file name="Flamethrower Shot SFX 01.ogg" />
+        <file name="Pistol Reload SFX 01.m4a" />
+        <file name="Pistol Reload SFX 01.ogg" />
+        <file name="Pistol Shot SFX 01.m4a" />
+        <file name="Pistol Shot SFX 01.ogg" />
+        <file name="Shotgun Reload SFX 01.m4a" />
+        <file name="Shotgun Reload SFX 01.ogg" />
+        <file name="Shotgun Shot SFX 01.m4a" />
+        <file name="Shotgun Shot SFX 01.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="Dictionary.xml" />
+    </files-folder>
+</c2project>

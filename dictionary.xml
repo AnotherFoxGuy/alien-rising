@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+	<PlayerWeaponVariations>
+		<Weapon>
+			<WeaponName>Pistol</WeaponName>
+			<WeaponSound>Pistol Shot SFX 01</WeaponSound>
+			<WeaponSoundReload>Pistol Reload SFX 01</WeaponSoundReload>
+			<WeaponID>PlayerWeaponVar0</WeaponID>
+			<KeyPress>49</KeyPress>
+			<Weapondamage>10</Weapondamage>
+			<WeaponBullets>1</WeaponBullets>
+			<WeaponSpread>0</WeaponSpread>
+			<WeaponTime>0.3</WeaponTime>
+			<WeaponRange>1500</WeaponRange>
+			<MagazineSize>11</MagazineSize>
+			<ReloadTime>0.5</ReloadTime>
+			<BulletSpeed>1500</BulletSpeed>
+			<AmmoCost>1</AmmoCost>
+		</Weapon>
+		<Weapon>
+			<WeaponName>Shotgun</WeaponName>
+			<WeaponSound>Shotgun Shot SFX 01</WeaponSound>
+			<WeaponSoundReload>Shotgun Reload SFX 01</WeaponSoundReload>
+			<WeaponID>PlayerWeaponVar1</WeaponID>
+			<KeyPress>50</KeyPress>
+			<Weapondamage>20</Weapondamage>
+			<WeaponBullets>6</WeaponBullets>
+			<WeaponSpread>15</WeaponSpread>
+			<WeaponTime>1</WeaponTime>
+			<WeaponRange>500</WeaponRange>
+			<MagazineSize>5</MagazineSize>
+			<ReloadTime>0.5</ReloadTime>
+			<BulletSpeed>2000</BulletSpeed>
+			<AmmoCost>1</AmmoCost>
+		</Weapon>
+		<Weapon>
+			<WeaponName>flamethrower</WeaponName>
+			<WeaponSound></WeaponSound>
+			<WeaponSoundReload></WeaponSoundReload>
+			<WeaponID>PlayerWeaponVar2</WeaponID>
+			<KeyPress>51</KeyPress>
+			<Weapondamage>0.5</Weapondamage>
+			<WeaponBullets>10</WeaponBullets>
+			<WeaponSpread>25</WeaponSpread>
+			<WeaponTime>0</WeaponTime>
+			<WeaponRange>300</WeaponRange>
+			<MagazineSize>10</MagazineSize>
+			<ReloadTime>0.5</ReloadTime>
+			<BulletSpeed>800</BulletSpeed>
+			<AmmoCost>0.1</AmmoCost>
+		</Weapon>
+		<Weapon>
+			<WeaponName>sniperrifle</WeaponName>
+			<WeaponSound>Pistol Shot SFX 01</WeaponSound>
+			<WeaponSoundReload>Pistol Reload SFX 01</WeaponSoundReload>
+			<WeaponID>PlayerWeaponVar3</WeaponID>
+			<KeyPress>52</KeyPress>
+			<Weapondamage>101</Weapondamage>
+			<WeaponBullets>1</WeaponBullets>
+			<WeaponSpread>0</WeaponSpread>
+			<WeaponTime>1.5</WeaponTime>
+			<WeaponRange>9000</WeaponRange>
+			<MagazineSize>5</MagazineSize>
+			<ReloadTime>2</ReloadTime>
+			<BulletSpeed>3000</BulletSpeed>
+			<AmmoCost>1</AmmoCost>
+		</Weapon>
+		<Weapon>
+			<WeaponName>Cheat Gun</WeaponName>
+			<WeaponID>PlayerWeaponVar999</WeaponID>
+			<KeyPress>99999</KeyPress>
+			<Weapondamage>9999</Weapondamage>
+			<WeaponBullets>100</WeaponBullets>
+			<WeaponSpread>180</WeaponSpread>
+			<WeaponTime>0</WeaponTime>
+			<WeaponRange>9999999999</WeaponRange>
+			<MagazineSize>9</MagazineSize>
+			<ReloadTime>0</ReloadTime>
+			<BulletSpeed>9999</BulletSpeed>
+			<AmmoCost>0</AmmoCost>
+		</Weapon>
+	</PlayerWeaponVariations>
+	<EnemyWeaponVariations>
+		<Weapon>
+			<WeaponID>EnemyWeaponVar0</WeaponID>
+			<Weapondamage>10</Weapondamage>
+			<WeaponBullets>1</WeaponBullets>
+			<WeaponSpread>0</WeaponSpread>
+			<WeaponTime>0.3</WeaponTime>
+			<WeaponRange>1500</WeaponRange>
+			<MagazineSize>11</MagazineSize>
+			<ReloadTime>0.5</ReloadTime>
+			<BulletSpeed>1500</BulletSpeed>
+		</Weapon>
+		<Weapon>
+			<WeaponID>EnemyWeaponVar1</WeaponID>
+			<Weapondamage>5</Weapondamage>
+			<WeaponBullets>6</WeaponBullets>
+			<WeaponSpread>15</WeaponSpread>
+			<WeaponTime>1</WeaponTime>
+			<WeaponRange>500</WeaponRange>
+			<MagazineSize>5</MagazineSize>
+			<ReloadTime>0.5</ReloadTime>
+			<BulletSpeed>2000</BulletSpeed>
+		</Weapon>
+	</EnemyWeaponVariations>
+	<ResourceKitVariations>
+		<ResourceKit>
+			<ResourceKitName>Health</ResourceKitName>
+			<ResourceKitID>ResourceKitVar0</ResourceKitID>
+			<ResourceKitHealth>500</ResourceKitHealth>
+			<ResourceKitAmmo>0</ResourceKitAmmo>
+			<ResourceKitDropChance>1</ResourceKitDropChance>
+		</ResourceKit>
+		<ResourceKit>
+			<ResourceKitName>Ammo</ResourceKitName>
+			<ResourceKitID>ResourceKitVar1</ResourceKitID>
+			<ResourceKitHealth>0</ResourceKitHealth>
+			<ResourceKitAmmo>50</ResourceKitAmmo>
+			<ResourceKitDropChance>1</ResourceKitDropChance>
+		</ResourceKit>
+	</ResourceKitVariations>
+	<Waves>
+		<Wave>
+			<WaveName>Wave 1</WaveName>
+			<AmountEnemys>2</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+		<Wave>
+			<WaveName>Wave 2</WaveName>
+			<AmountEnemys>4</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+		<Wave>
+			<WaveName>Wave 3 master</WaveName>
+			<AmountEnemys>60</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+		<Wave>
+			<WaveName>Wave4</WaveName>
+			<AmountEnemys>6</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+		<Wave>
+			<WaveName>Wave 5</WaveName>
+			<AmountEnemys>6</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+		<Wave>
+			<WaveName>Wave 6</WaveName>
+			<AmountEnemys>6</AmountEnemys>
+			<EnemysSpawnTime>0.01</EnemysSpawnTime>
+		</Wave>
+	</Waves>
+</Dictionary>
+
+<!--
+ResourceKit
+Health
+Player WeaponVar0
+DropChance
+ReloadTime
+MagazineSize
+Spread
+"/Dictionary/ResourceKitVariations/ResourceKit"
+/Dictionary/Waves/Wave
+XML.StringValue("WeaponName/text()")
+"File"&XML.StringValue("WeaponName/text()") AmountEnemys
+-->

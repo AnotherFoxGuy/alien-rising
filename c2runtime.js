@@ -25894,11 +25894,35 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
+		cr.plugins_.Browser,
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false
+	]
+,	[
 		cr.plugins_.Function,
 		true,
 		false,
 		false,
 		false,
+		false,
+		false,
+		false,
+		false,
+		false
+	]
+,	[
+		cr.plugins_.Button,
+		false,
+		true,
+		true,
+		true,
 		false,
 		false,
 		false,
@@ -25918,23 +25942,11 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.Browser,
+		cr.plugins_.Keyboard,
 		true,
 		false,
 		false,
 		false,
-		false,
-		false,
-		false,
-		false,
-		false
-	]
-,	[
-		cr.plugins_.Button,
-		false,
-		true,
-		true,
-		true,
 		false,
 		false,
 		false,
@@ -25966,30 +25978,6 @@ cr.getProjectModel = function() { return [
 		true
 	]
 ,	[
-		cr.plugins_.progressbar,
-		false,
-		true,
-		true,
-		true,
-		false,
-		false,
-		false,
-		false,
-		false
-	]
-,	[
-		cr.plugins_.Keyboard,
-		true,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false
-	]
-,	[
 		cr.plugins_.Multiplayer,
 		true,
 		false,
@@ -26002,7 +25990,55 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
+		cr.plugins_.progressbar,
+		false,
+		true,
+		true,
+		true,
+		false,
+		false,
+		false,
+		false,
+		false
+	]
+,	[
+		cr.plugins_.TiledBg,
+		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true
+	]
+,	[
+		cr.plugins_.UserMedia,
+		false,
+		true,
+		true,
+		true,
+		false,
+		true,
+		true,
+		true,
+		false
+	]
+,	[
 		cr.plugins_.Sprite,
+		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		false
+	]
+,	[
+		cr.plugins_.Text,
 		false,
 		true,
 		true,
@@ -26026,18 +26062,6 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.UserMedia,
-		false,
-		true,
-		true,
-		true,
-		false,
-		true,
-		true,
-		true,
-		false
-	]
-,	[
 		cr.plugins_.XML,
 		false,
 		false,
@@ -26047,30 +26071,6 @@ cr.getProjectModel = function() { return [
 		false,
 		false,
 		false,
-		false
-	]
-,	[
-		cr.plugins_.TiledBg,
-		false,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true
-	]
-,	[
-		cr.plugins_.Text,
-		false,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
 		false
 	]
 	],
@@ -29623,7 +29623,7 @@ cr.getProjectModel = function() { return [
 					"Default",
 					"NickName",
 					"NickName",
-					1,
+					0,
 					1,
 					0,
 					0,
@@ -29646,7 +29646,7 @@ cr.getProjectModel = function() { return [
 					"Default",
 					"GameName",
 					"GameName",
-					1,
+					0,
 					1,
 					0,
 					0,
@@ -49740,7 +49740,7 @@ false,false,5244117944243861,false
 	true,
 	true,
 	false,
-	"0.0.0.3",
+	"0.0.0.5",
 	true,
 	false,
 	0,

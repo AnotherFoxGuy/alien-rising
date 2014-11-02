@@ -186,7 +186,7 @@
                         <text>Default</text>
                         <placeholder>NickName</placeholder>
                         <tooltip>NickName</tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>
@@ -215,7 +215,7 @@
                         <text>Default</text>
                         <placeholder>GameName</placeholder>
                         <tooltip>GameName</tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <read-only>No</read-only>
                         <spell-check>No</spell-check>

@@ -110,14 +110,14 @@
 			<ResourceKitID>ResourceKitVar0</ResourceKitID>
 			<ResourceKitHealth>500</ResourceKitHealth>
 			<ResourceKitAmmo>0</ResourceKitAmmo>
-			<ResourceKitDropChance>1</ResourceKitDropChance>
+			<ResourceKitDropChance>100</ResourceKitDropChance>
 		</ResourceKit>
 		<ResourceKit>
 			<ResourceKitName>Ammo</ResourceKitName>
 			<ResourceKitID>ResourceKitVar1</ResourceKitID>
 			<ResourceKitHealth>0</ResourceKitHealth>
 			<ResourceKitAmmo>50</ResourceKitAmmo>
-			<ResourceKitDropChance>1</ResourceKitDropChance>
+			<ResourceKitDropChance>100</ResourceKitDropChance>
 		</ResourceKit>
 	</ResourceKitVariations>
 	<Waves>

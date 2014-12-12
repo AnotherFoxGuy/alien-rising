@@ -1590,7 +1590,7 @@
                             <sub-events>
                                 <event-block sid="1682516165468894">
                                     <conditions>
-                                        <condition disabled="1" id="-8" name="Compare two values" sid="7563225603080403" type="System">
+                                        <condition id="-8" name="Compare two values" sid="7563225603080403" type="System">
                                             <param id="0" name="First value">floor(random(100))</param>
                                             <param id="1" name="Comparison">3</param>
                                             <param id="2" name="Second value">Dictionary.Get(&quot;ResourceKitDropChance&quot;&amp;Dictionary.Get(&quot;ResourceKit&quot;&amp;RandomNumber))</param>
@@ -1614,6 +1614,10 @@
                                             <param id="0" name="Animation">Dictionary.Get(&quot;ResourceKit&quot;&amp;RandomNumber)</param>
                                             <param id="1" name="From">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="9635368108113102" type="Function">
+                                            <param id="0" name="Name">&quot;Log&quot;</param>
+                                            <param id="1" name="Parameter {n}">Dictionary.Get(&quot;ResourceKitAmmo&quot;&amp;Dictionary.Get(&quot;ResourceKit&quot;&amp;RandomNumber))</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1631,7 +1635,7 @@
                             <sub-events>
                                 <event-block sid="1939957013631623">
                                     <conditions>
-                                        <condition disabled="1" id="-8" name="Compare two values" sid="1641584046769936" type="System">
+                                        <condition id="-8" name="Compare two values" sid="1641584046769936" type="System">
                                             <param id="0" name="First value">floor(random(100))</param>
                                             <param id="1" name="Comparison">3</param>
                                             <param id="2" name="Second value">Dictionary.Get(&quot;ResourceKitDropChance&quot;&amp;Dictionary.Get(&quot;ResourceKit&quot;&amp;loopindex))</param>
@@ -1654,6 +1658,10 @@
                                         <action id="4" name="Set animation" sid="4655579088654847" type="ResourceKit">
                                             <param id="0" name="Animation">Dictionary.Get(&quot;ResourceKit&quot;&amp;RandomNumber)</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="1102879994562938" type="Function">
+                                            <param id="0" name="Name">&quot;Log&quot;</param>
+                                            <param id="1" name="Parameter {n}">Dictionary.Get(&quot;ResourceKitDropChance&quot;&amp;Dictionary.Get(&quot;ResourceKit&quot;&amp;RandomNumber))</param>
                                         </action>
                                     </actions>
                                 </event-block>

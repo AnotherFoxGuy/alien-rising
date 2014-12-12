@@ -334,6 +334,9 @@
                 <action id="0" name="Alert" sid="7335003319045991" type="Browser">
                     <param id="0" name="Message">&quot;The end!&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="7068539256254835" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="9" name="Reload" sid="2833040864797115" type="Browser" />
                 <action id="0" name="Call function" sid="9612118371451339" type="Function">
                     <param id="0" name="Name">&quot;Log&quot;</param>

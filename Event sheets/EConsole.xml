@@ -106,35 +106,58 @@
                             <param id="0" name="Name">&quot;s&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4410235206161913" type="Function">
-                            <param id="0" name="Name">&quot;Log&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;spawnt enemys&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="3941217306105122">
+                        <event-block sid="2719075313319929">
                             <conditions>
-                                <condition id="-10" name="For" sid="5392728953490618" type="System">
-                                    <param id="0" name="Name">&quot;&quot;</param>
-                                    <param id="1" name="Start index">0</param>
-                                    <param id="2" name="End index">Function.Param(1)</param>
+                                <condition id="-8" name="Compare two values" sid="5292375836204943" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">20</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="6416811288710931" type="System">
-                                    <param id="0" name="Object to create">Alien1</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">player1.X+100</param>
-                                    <param id="3" name="Y">player1.Y+100</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="5839336865023287" type="System">
-                                    <param id="0" name="Object to create">Alien2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">player1.X+100</param>
-                                    <param id="3" name="Y">player1.Y+100</param>
+                                <action id="0" name="Call function" sid="9992084057133588" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Cant spawn more than 20 enemy&apos;s &quot;</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="9705562625521529">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7219566503626215" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8603660725339319" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;spawnt enemys&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3164367171737938">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="6663203775964868" type="System">
+                                            <param id="0" name="Name">&quot;Spawn&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="3609424103716428" type="System">
+                                            <param id="0" name="Object to create">Alien1</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">player1.X+100</param>
+                                            <param id="3" name="Y">player1.Y+100</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="6689173875860555" type="System">
+                                            <param id="0" name="Object to create">Alien2</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">player1.X+100</param>
+                                            <param id="3" name="Y">player1.Y+100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -192,34 +215,44 @@
                 <event-block sid="3115440476263895">
                     <conditions>
                         <condition id="0" name="On function" sid="348091775120208" type="Function">
-                            <param id="0" name="Name">&quot;walls on&quot;</param>
+                            <param id="0" name="Name">&quot;walls&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="4979628084176415" type="Walls">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="4263581487829811" type="Function">
-                            <param id="0" name="Name">&quot;Log&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;set walls to visible&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7478175106347056">
-                    <conditions>
-                        <condition id="0" name="On function" sid="9273019895487766" type="Function">
-                            <param id="0" name="Name">&quot;walls off&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="7312261083504145" type="Walls">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="7710342894681646" type="Function">
-                            <param id="0" name="Name">&quot;Log&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;set walls to invisible&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8482190400125163">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2441582472425196" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4979628084176415" type="Walls">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4263581487829811" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;set walls to visible&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5825752385828263">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2147242687740995" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="7312261083504145" type="Walls">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7710342894681646" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;set walls to invisible&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="4750011788233241">
                     <conditions>
@@ -341,36 +374,51 @@
                 <event-block sid="8809774009841212">
                     <conditions>
                         <condition id="0" name="On function" sid="1123426680953087" type="Function">
-                            <param id="0" name="Name">&quot;ov on&quot;</param>
+                            <param id="0" name="Name">&quot;ov&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set canvas size" sid="2339712214563672" type="System">
-                            <param id="0" name="Width">10000</param>
-                            <param id="1" name="Height">5000</param>
-                        </action>
-                        <action id="0" name="Call function" sid="3536079526076177" type="Function">
+                        <action id="0" name="Call function" sid="7000221953771382" type="Function">
                             <param id="0" name="Name">&quot;Log&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Overview on&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="6012844223534361">
-                    <conditions>
-                        <condition id="0" name="On function" sid="4866829313939039" type="Function">
-                            <param id="0" name="Name">&quot;ov off&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-28" name="Set canvas size" sid="4220023123433796" type="System">
-                            <param id="0" name="Width">1280</param>
-                            <param id="1" name="Height">720</param>
-                        </action>
-                        <action id="0" name="Call function" sid="2328508856294889" type="Function">
-                            <param id="0" name="Name">&quot;Log&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Overview off&quot;</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="6218177448249502">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9729198648154796" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set canvas size" sid="2339712214563672" type="System">
+                                    <param id="0" name="Width">10000</param>
+                                    <param id="1" name="Height">5000</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3536079526076177" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Overview on&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4346329650333373">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7443299739507829" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set canvas size" sid="4220023123433796" type="System">
+                                    <param id="0" name="Width">1280</param>
+                                    <param id="1" name="Height">720</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2328508856294889" type="Function">
+                                    <param id="0" name="Name">&quot;Log&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Overview off&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="980867848088532">
                     <conditions>

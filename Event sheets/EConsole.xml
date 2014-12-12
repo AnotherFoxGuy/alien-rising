@@ -79,13 +79,17 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="5852366913236209" type="System">
+                            <param id="0" name="Variable">Command</param>
+                            <param id="1" name="Value">ConsoleInput.Text</param>
+                        </action>
                         <action id="0" name="Call function" sid="575459655053389" type="Function">
                             <param id="0" name="Name">&quot;Log&quot;</param>
                             <param id="1" name="Parameter {n}">ConsoleInput.Text</param>
                         </action>
                         <action id="0" name="Call function" sid="8863099052241712" type="Function">
-                            <param id="0" name="Name">ConsoleInput.Text</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="0" name="Name">tokenat(ConsoleInput.Text,0,&quot; &quot;)</param>
+                            <param id="1" name="Parameter {n}">tokenat(ConsoleInput.Text,1,&quot; &quot;){###}tokenat(ConsoleInput.Text,2,&quot; &quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="8644557646451086" type="ConsoleInput">
                             <param id="0" name="Text">&quot;&quot;</param>
@@ -103,23 +107,36 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="6416811288710931" type="System">
-                            <param id="0" name="Object to create">Alien1</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">player1.X+100</param>
-                            <param id="3" name="Y">player1.Y+100</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="5839336865023287" type="System">
-                            <param id="0" name="Object to create">Alien2</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">player1.X+100</param>
-                            <param id="3" name="Y">player1.Y+100</param>
-                        </action>
                         <action id="0" name="Call function" sid="4410235206161913" type="Function">
                             <param id="0" name="Name">&quot;Log&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;spawnt enemys&quot;</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="3941217306105122">
+                            <conditions>
+                                <condition id="-10" name="For" sid="5392728953490618" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Function.Param(1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6416811288710931" type="System">
+                                    <param id="0" name="Object to create">Alien1</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">player1.X+100</param>
+                                    <param id="3" name="Y">player1.Y+100</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5839336865023287" type="System">
+                                    <param id="0" name="Object to create">Alien2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">player1.X+100</param>
+                                    <param id="3" name="Y">player1.Y+100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="5960837427271626">
                     <conditions>
